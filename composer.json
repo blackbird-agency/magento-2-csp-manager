@@ -1,0 +1,22 @@
+{
+    "name": "blackbird/module-csp-manager",
+    "version": "1.0.0",
+    "description": "A Magento 2 module to manage Content Security Policy (CSP) rules directly from the CLI and env.php, including automatic CSP header splitting.",
+    "type": "magento2-module",
+    "require": {
+        "magento/framework": "*",
+        "magento/module-csp": "*",
+        "php": "^8.2"
+    },
+    "license": [
+        "MIT"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Blackbird\\CSPManager\\": ""
+        }
+    }
+}

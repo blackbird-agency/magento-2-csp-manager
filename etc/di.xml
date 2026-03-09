@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Csp\Model\CompositePolicyCollector">
+        <arguments>
+            <argument name="collectors" xsi:type="array">
+                <item name="env_collector" xsi:type="object">Blackbird\CSPManager\Model\Collector\EnvPolicyCollector</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="blackbird_csp_add" xsi:type="object">Blackbird\CSPManager\Console\Command\AddCspCommand</item>
+                <item name="blackbird_csp_set" xsi:type="object">Blackbird\CSPManager\Console\Command\SetCspCommand</item>
+                <item name="blackbird_csp_unset" xsi:type="object">Blackbird\CSPManager\Console\Command\UnsetCspCommand</item>
+                <item name="blackbird_csp_list" xsi:type="object">Blackbird\CSPManager\Console\Command\ListCspCommand</item>
+                <item name="blackbird_csp_remove" xsi:type="object">Blackbird\CSPManager\Console\Command\RemoveCspCommand</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Csp\Model\CspRenderer">
+        <plugin name="blackbird_csp_header_splitter" type="Blackbird\CSPManager\Plugin\Model\CspRendererPlugin" />
+    </type>
+</config>
