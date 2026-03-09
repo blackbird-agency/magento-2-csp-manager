@@ -123,6 +123,11 @@ bin/magento csp:rule:remove img-src
 
 Note: The `add`, `set`, `remove`, and `unset` commands validate that the directive passed as an argument is valid according to the CSP specification (list from MDN).
 
+**Important:** After making any changes to CSP rules, you should clean the `full_page` cache to reflect the changes on the frontend:
+```bash
+bin/magento cache:clean full_page
+```
+
 ### Technical Configuration
 
 The rules are stored in `app/etc/env.php` under the `csp` key:
