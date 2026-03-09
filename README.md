@@ -1,5 +1,8 @@
 # Blackbird CSP Manager
 
+[![Latest Stable Version](https://img.shields.io/packagist/v/blackbird/module-csp-manager.svg?style=flat-square)](https://packagist.org/packages/blackbird/module-csp-manager)
+[![License: MIT](https://img.shields.io/github/license/blackbird-agency/magento-2-csp-manager.svg?style=flat-square)](./LICENSE.txt)
+
 This module allows managing Content Security Policy (CSP) rules directly from the Magento command line (CLI).
 The rules are stored in the `app/etc/env.php` file, which allows for environment-specific management without going through the database or the backoffice.
 
