@@ -24,7 +24,7 @@ class AddCspCommand extends Command
      */
     public function __construct(
         private readonly CspConfigManager $cspConfigManager,
-        string $name = null
+        ?string $name = null
     ) {
         parent::__construct($name);
     }
